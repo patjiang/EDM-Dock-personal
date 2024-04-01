@@ -11,7 +11,7 @@ from simtk.openmm import app, Platform, LangevinIntegrator
 from simtk.openmm.app import PDBFile, Simulation, Modeller
 from openmmforcefields.generators import SystemGenerator
 
-
+DGSOL = '/content/EDM-Dock-personal/DGSOL'
 K_UNIT = unit.kilojoule_per_mole / unit.angstrom ** 2
 
 
@@ -56,8 +56,7 @@ def write_input(filepath, mu, var, ligand_bm, pocket_dm, k=1.0):
     outfile.close()
 
 
-def run_dgsol(path-to-DGSOL, input_path, output_path, summary_path, n_sol=10):
-    DGSOL = path-to-DGSOL
+def run_dgsol(input_path, output_path, summary_path, n_sol=10):
     cmd = f'{DGSOL} -s{n_sol} {input_path} {output_path} {summary_path} > /dev/null'
     call(cmd, shell=True)
 

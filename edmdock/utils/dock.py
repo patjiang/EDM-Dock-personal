@@ -5,10 +5,10 @@ from subprocess import call
 from collections import defaultdict
 
 import numpy as np
-from openforcefield.topology import Molecule
+from openff.toolkit.topology import Molecule
 from simtk import unit, openmm
-from simtk.openmm import app, Platform, LangevinIntegrator
-from simtk.openmm.app import PDBFile, Simulation, Modeller
+from openmm import app, Platform, LangevinIntegrator
+from openmm.app import PDBFile, Simulation, Modeller
 from openmmforcefields.generators import SystemGenerator
 
 DGSOL = '/content/EDM-Dock-personal/DGSOL'

@@ -225,7 +225,7 @@ def generate_simple(system_path):
         ligand_edge_index.extend([[i, j], [j, i]])
         type_ = BOND_TYPES[bond.GetBondType()]
         ligand_edge_types.extend([type_, type_])
-    ligand_edge_index = np.array(ligand_edge_index, dtype=np.long).T
+    ligand_edge_index = np.array(ligand_edge_index, dtype=np.longlong).T
     ligand_edge_types = np.array(ligand_edge_types)
 
     inter_edge_index = np.array(list(product(range(ligand_n), range(pocket_n)))).T
@@ -449,7 +449,7 @@ def generate_ligand_features(system_path):
         bond_index.extend([[i, j], [j, i]])
         type_ = BOND_TYPES[bond.GetBondType()]
         bond_types.extend([type_, type_])
-    bond_index = np.array(bond_index, dtype=np.long).T
+    bond_index = np.array(bond_index, dtype=np.longlong).T
     bond_types = np.array(bond_types)
 
     data = {

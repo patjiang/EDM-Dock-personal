@@ -11,7 +11,7 @@ from openmm import app, Platform, LangevinIntegrator
 from openmm.app import PDBFile, Simulation, Modeller
 from openmmforcefields.generators import SystemGenerator
 
-DGSOL = '/content/EDM-Dock-personal/DGSOL'
+DGSOL = '/home/phjiang/.conda/envs/EDM-Dock-personal/DGSOL'
 K_UNIT = unit.kilojoule_per_mole / unit.angstrom ** 2
 
 

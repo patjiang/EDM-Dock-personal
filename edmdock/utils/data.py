@@ -221,7 +221,7 @@ class PairCollater(object):
         self.exclude_keys = exclude_keys
 
     def __call__(self, batch):
-        return PairBatch.from_data_list(batch, follow_batch = self.follow_batch, exclude_keys = self.exclude_keys)
+        return PairBatch.from_data_list(data_list = batch, follow_batch = self.follow_batch, exclude_keys = self.exclude_keys)
 
 
 class BalancedSampler(Sampler):

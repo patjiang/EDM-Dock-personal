@@ -124,7 +124,7 @@ if __name__ == '__main__':
     print('Loading test set...')
     test_dl = load_dataset(data_config['test_path'], data_config['filename'], shuffle=False, **dl_kwargs)
 
-    trainer = Trainer(accelerator="auto")
+    trainer = Trainer(accelerator="cpu")
     outputs = trainer.predict(model, test_dl)
     # print(outputs)
     preds, targets, losses, batches = zip(*outputs)

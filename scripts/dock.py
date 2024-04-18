@@ -116,7 +116,7 @@ if __name__ == '__main__':
     set_seed(config.seed)
 
     model = create_model(model_config)
-    model.load_state_dict(torch.load(weight_path)['state_dict'])
+    model.load_state_dict(torch.load(weight_path, map_location=torch.device('cpu'))['state_dict'])
     model.eval()
 
     batch_size = 1

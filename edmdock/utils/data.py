@@ -91,7 +91,8 @@ class PairBatch(Batch):
             follow_batch = []
         if exclude_keys is None:
             exclude_keys = []
-
+        print(type(data_list), data_list)
+        print(type(data_list[0]), data_list[0])
         keys = list(set(data_list[0].keys) - set(exclude_keys))
         assert 'batch' not in keys and 'ptr' not in keys
 
